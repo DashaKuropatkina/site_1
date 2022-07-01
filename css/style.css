@@ -48,8 +48,10 @@ body {
     color: #252B42;
 }
 
-.hi__right {
+.hi__link-item {
+    list-style-type: none;
     display: flex;
+    margin-left: 426px;
 }
 
 .hi__link-link {
@@ -63,12 +65,30 @@ body {
     padding-right: 26px;
 }
 
+.hi__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-left: 16px;
     padding-right: 22px;
 }
 
+.basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-left: 141px;
 }
 
@@ -663,4 +683,11 @@ body {
     justify-content: center;
     gap: 10px;
     margin-right: 42px;
+}
+
+@media only screen and (max-device-width: 767px) {
+    .hi__head {
+        background: #F7F7F7;
+        padding-left: 35px;
+    }
 }
