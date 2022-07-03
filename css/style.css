@@ -13,11 +13,11 @@ body {
 }
 
 .wrapper {
+    position: relative;
     min-height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-
 }
 
 .container {
@@ -29,18 +29,19 @@ body {
     flex: 1 1 auto;
 }
 
-.hi {
+.header {
     background-image: url('../img/cover.jpg');
 }
 
-.hi__head {
+.header__head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 36px;
+    flex-wrap: wrap;
 }
 
-.hi__left {
+.header__left {
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
@@ -48,13 +49,13 @@ body {
     color: #252B42;
 }
 
-.hi__link-item {
+.header__link-item {
     list-style-type: none;
     display: flex;
     margin-left: 426px;
 }
 
-.hi__link-link {
+.header__link-link {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -65,7 +66,7 @@ body {
     padding-right: 26px;
 }
 
-.hi__icons {
+.header__icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,26 +84,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 140px;
 }
 
-.menu {
+.header__menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 141px;
 }
 
-.hi__row {
+.header__row {
+    flex-wrap: wrap;
     display: flex;
     margin-top: 40px;
 }
 
-.hi__body {
+.header__body {
     width: 509px;
     margin-top: 150px;
 }
 
-.hi__title {
+.header__title {
     font-weight: 900;
     font-size: 58px;
     line-height: 65px;
@@ -111,7 +111,7 @@ body {
     padding-bottom: 35px;
 }
 
-.hi__text {
+.header__text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -122,7 +122,7 @@ body {
     padding-bottom: 35px;
 }
 
-.hi__btn {
+.header__btn {
     display: flex;
 }
 
@@ -189,6 +189,7 @@ body {
 .practice__column {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 34px;
     padding-bottom: 102px;
 }
@@ -260,6 +261,7 @@ body {
 .advice__column {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
     padding-bottom: 108px;
 }
@@ -367,6 +369,7 @@ body {
 
 .firms {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 89px;
@@ -463,6 +466,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     padding-bottom: 155px;
 }
 
@@ -568,6 +572,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -615,6 +620,7 @@ body {
 .info__row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 50px;
     padding-bottom: 42px;
 }
@@ -663,6 +669,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -686,8 +693,166 @@ body {
 }
 
 @media only screen and (max-device-width: 767px) {
-    .hi__head {
-        background: #F7F7F7;
+    .header__head {
+        background: #F6F6F6;
         padding-left: 35px;
+        padding-right: 35px;
+        max-width: 414px;
+        padding-bottom: 36px;
+    }
+
+    .header__right {
+        display: none;
+    }
+
+    .basket {
+        padding-right: 33px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        max-width: 416px;
+    }
+
+    .header__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 84px;
+    }
+
+    .header__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        padding-bottom: 35px;
+        width: 323px;
+    }
+
+    .header__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn__get {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .header__image img {
+        width: 377px;
+        height: 445px;
+        margin-top: 108px;
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+
+    .practice__row {
+        max-width: 258px;
+        padding: 85px 78px 75px 78px;
+    }
+
+    .advice__row {
+        max-width: 206px;
+        padding-left: 104px;
+        padding-right: 104px;
+    }
+
+    .about__row {
+        max-width: 251px;
+        padding-left: 82px;
+        padding-right: 82px;
+    }
+
+    .about__left img {
+        max-width: 333px;
+        margin-left: 42px;
+        margin-right: 42px;
+    }
+
+    .about__column {
+        flex-wrap: wrap;
+    }
+
+    .about__right {
+        padding: 72px 45px 135px 45px;
+    }
+
+    .firms {
+        max-width: 150px;
+        margin: 81px 132px 85px 132px;
+    }
+
+    .clients__card {
+        position: static;
+        width: 414px;
+        height: 212px;
+        top: 0;
+        left: 0;
+    }
+
+    .clients__card-item {
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+    .clients__card-title {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .email {
+        margin-left: 0px;
+    }
+
+    .email__heading {
+        width: 220px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .contact__row {
+        max-width: 264px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+
+    .contact__column {
+        gap: 30px;
+    }
+
+    .consultation__row {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .consultation__button {
+        margin-right: 0px;
+        margin-top: 50px;
+        width: 236px;
+    }
+
+    .info__row {
+        max-width: 215px;
+        padding-left: 88px;
+        padding-top: 20px;
+    }
+
+    .info__row-item {
+        padding-top: 30px;
+    }
+
+    .footer__row {
+        max-width: 209px;
+        padding-left: 92px;
+        gap: 50px;
+        padding-bottom: 111px;
     }
 }
